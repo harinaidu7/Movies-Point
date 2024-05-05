@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import './movie-details.css'
-import starSVG from 'C:/Users/91776/Desktop/New Work Space/React/Movies Point/Movies-point/src/assets/star-svgrepo-com.svg';
+// import starSVG from '../src/assets/star-svgrepo-com.svg';
 export default function MoviesDetail() {
     const { movieId } = useParams();
     const [movieDetails, setMovieDetails] = useState(null);
@@ -39,7 +39,9 @@ export default function MoviesDetail() {
                             <div>Original title: {movieDetails.original_title}</div>
                             <div>popularity: {movieDetails.popularity}</div>
                             <div>Release Date: {movieDetails.release_date}</div>
-                            <div>  <img src={starSVG} alt="Star" className="star-icon" />{movieDetails.vote_average}</div>
+                            <div>  
+                                {/* <img src={starSVG} alt="Star" className="star-icon" /> */}
+                                {movieDetails.vote_average}</div>
                             <p>Overview: {movieDetails.overview}</p>
 
                         </div>
