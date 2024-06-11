@@ -37,6 +37,7 @@ export default function PopularMovies() {
                                             <div className="card-date">{movie.release_date}</div>
                                             <div className="card-rating">
                                                 <img src={starSVG} alt="Star" className="star-icon" />
+                                                
                                                 <span>{movie.rating}</span>
                                             </div>
                                         </div>

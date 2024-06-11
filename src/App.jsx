@@ -8,6 +8,7 @@ import PopularMovies from './components/popular';
 import MoviesDetail from './components/movie-details/movie-details';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchResults from './components/searchResults';
 
 function App() {
 
@@ -68,11 +69,13 @@ function App() {
       
        <Switch>
           <Route path='/' exact>
-            <Search onSearchChange={handleOnSearchChange} />
+            <Search onSearchChange={()=>{}} />
             <PopularMovies />
           </Route>
           {/* <Route path='/' exact  component={Search} /> */}
           {/* <Route path='/movie-details/:movieId' component={MoviesDetail}  /> */}
+          <Route path="/search-results/:query" component={SearchResults} />
+          
           <Route path='/movie-details/:movieId' component={MoviesDetail} />
        </Switch>
       </Router>
